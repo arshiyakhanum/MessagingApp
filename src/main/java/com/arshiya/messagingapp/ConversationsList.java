@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.arshiya.messagingapp.adapters.RealmRecyclerViewAdapter;
+import com.arshiya.messagingapp.adapters.SearchResultsAdapter;
 import com.arshiya.messagingapp.model.SmsModel;
 
 import java.util.Date;
@@ -44,7 +45,7 @@ public class ConversationsList extends AppCompatActivity implements View.OnClick
     private EditText mSearchInput;
     private LinearLayout mSearchResultHolder;
     private RecyclerView mSearchResultRecyclerView;
-    private ConversationsRecyclerViewAdapter mSearchResultAdapter;
+    private SearchResultsAdapter mSearchResultAdapter;
 
 
     @Override
@@ -113,7 +114,23 @@ public class ConversationsList extends AppCompatActivity implements View.OnClick
         RecyclerView.LayoutManager searchManager = new LinearLayoutManager(this);
 
         mSearchResultRecyclerView.setLayoutManager(searchManager);
-        mSearchResultAdapter = new ConversationsRecyclerViewAdapter(null);
+        mSearchResultAdapter = new SearchResultsAdapter(null, new SearchResultsAdapter.OnItemClickListenerRecyclerView() {
+            @Override
+            public void onItemClick(View item, RealmResults<SmsModel> realmResults) {
+                int pos = mSearchResultRecyclerView.getChildLayoutPosition(item);
+
+                long threadId = realmResults.get(pos).getThreadId();
+                String body = realmResults.get(pos).getBody();
+
+                Intent intent = new Intent(ConversationsList.this, Conversation.class);
+                intent.putExtra("thread_id", threadId);
+                intent.putExtra("title", realmResults.get(pos).getAddress());
+
+                Log.d(TAG, threadId + " - " + "body : " + body);
+
+                startActivity(intent);            }
+        });
+
         mSearchResultRecyclerView.setAdapter(mSearchResultAdapter);
 
         mSearch.setVisibility(View.VISIBLE);
