@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#CDDC39</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#727272</color>
+    <color name="lightPrimaryColor">#B2DFDB</color>
+    <color name="text_imp">#202020</color>
+    <color name="sub_text">#434141</color>
+    <color name="sent_background">#d4ca74</color>
+    <color name="received_background">#d4d4d3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white2">#e6e6e6</color>
+    <color name="black_1">#555</color>
+    <color name="green1">#09ac2f</color>
+
+
+</resources>

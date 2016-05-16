@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MessagingApp</string>
+    <string name="Messaging">Messaging</string>
+    <string name="messages">Messages</string>
+    <string name="conversation_list_empty_message">No Messages in your conversations list</string>
+    <string name="address">address</string>
+    <string name="message_snippet">message snippet ksjhfkskdfhsiodjf jsndkhskdhs jsdkjsijds sdkshdkisdi</string>
+    <string name="date">date</string>
+    <string name="title_activity_conversation">Conversation</string>
+    <string name="enter_message">Enter message</string>
+    <string name="send">send</string>
+    <string name="search">search</string>
+    <string name="new_">new</string>
+    <string name="hint_search">search</string>
+    <string name="title_activity_contacts_picker">Contacts Picker</string>
+    <string name="title_activity_new_message">New message</string>
+    <string name="findContact">Find contact</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_search_realm">Search</string>
+    <string name="to">To</string>
+    <string name="contact_name">Contact name</string>
+    <string name="neew_message">New message</string>
+</resources>
